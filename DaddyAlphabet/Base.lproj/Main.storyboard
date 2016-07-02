@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Left View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Left View" id="BYZ-38-t0r" customClass="LeftViewController" customModule="DaddyAlphabet" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-i9-TVl">
+                                <rect key="frame" x="170" y="184" width="261" height="232"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-bh-WRy">
+                                <rect key="frame" x="130" y="152" width="341" height="295"/>
+                                <color key="tintColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGP-YB-QtN"/>
+                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="weK-JS-deb"/>
+                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xYJ-gg-HuF"/>
+                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zoA-uU-G0a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageBackground" destination="4Xd-bh-WRy" id="QWl-wn-Ciw"/>
+                        <outlet property="labelText" destination="pBa-i9-TVl" id="mjj-NE-CWM"/>
+                        <segue destination="wd4-zX-p89" kind="show" identifier="rightSegue" id="y8F-mY-tpq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-557" y="-1257"/>
+        </scene>
+        <!--Right View-->
+        <scene sceneID="YPp-1g-h3L">
+            <objects>
+                <viewController title="Right View" id="wd4-zX-p89" customClass="RightViewController" customModule="DaddyAlphabet" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaT-uk-pgs"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXf-Y5-35P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yvQ-Lu-XQI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Go-RK-TmU">
+                                <rect key="frame" x="154" y="155" width="293" height="290"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="200"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="646-Cc-OwV">
+                                <rect key="frame" x="138" y="145" width="324" height="310"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="Ftm-63-apt"/>
+                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="klU-TZ-cwY"/>
+                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="olc-9I-2RS"/>
+                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="xH1-pK-ULg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageBackground" destination="646-Cc-OwV" id="9IP-Qu-2io"/>
+                        <outlet property="labelText" destination="7Go-RK-TmU" id="kNa-EL-jb4"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="leftSegue" id="Wn8-rM-maJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIU-Xq-w7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="-1257"/>
         </scene>
     </scenes>
 </document>
