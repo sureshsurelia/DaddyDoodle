@@ -19,11 +19,11 @@ class RightViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let tapEvent = UITapGestureRecognizer(target:self,action: Selector("handleTapes:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(RightViewController.handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(RightViewController.handleSwipes(_:)))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(RightViewController.handleSwipes(_:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(RightViewController.handleSwipes(_:)))
+        let tapEvent = UITapGestureRecognizer(target:self,action: #selector(RightViewController.handleTapes(_:)))
         
         leftSwipe.direction = .Left
         rightSwipe.direction = .Right
@@ -75,24 +75,24 @@ class RightViewController: UIViewController{
         
         if((sender.direction == .Left || sender.direction == .Down) && (swipeCount > 0 && swipeCount <= 25)){
             if (directionToIncrease == .Left){
-                swipeCount++
+                swipeCount += 1
                 self.performSegueWithIdentifier(leftSegue, sender: self)
                 return
             }else
             {
-                swipeCount--
+                swipeCount -= 1
                 self.performSegueWithIdentifier(leftSegue, sender: self)
             }
         }
         
         if((sender.direction == .Right || sender.direction == .Up) && (swipeCount > 0 && swipeCount <= 25)){
             if (directionToIncrease == .Right){
-                swipeCount++
+                swipeCount += 1
                 self.performSegueWithIdentifier(leftSegue, sender: self)
                 return
             }else
             {
-                swipeCount--
+                swipeCount -= 1
                 self.performSegueWithIdentifier(leftSegue, sender: self)
             }
         }
