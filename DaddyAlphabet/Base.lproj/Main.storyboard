@@ -16,36 +16,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-i9-TVl">
-                                <rect key="frame" x="170" y="184" width="261" height="232"/>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-i9-TVl">
+                                <rect key="frame" x="145" y="158" width="341" height="295"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BgH-Mz-GlZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="NWV-QB-fjR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-bh-WRy">
-                                <rect key="frame" x="130" y="152" width="341" height="295"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-bh-WRy">
+                                <rect key="frame" x="145" y="158" width="341" height="295"/>
                                 <color key="tintColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ZJg-LF-ebj"/>
+                                    <constraint firstAttribute="height" constant="250" id="a3M-xH-42z"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGP-YB-QtN"/>
-                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="weK-JS-deb"/>
-                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xYJ-gg-HuF"/>
-                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zoA-uU-G0a"/>
+                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLf-yW-fwt"/>
+                            <constraint firstItem="4Xd-bh-WRy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X0J-HG-1LY"/>
+                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cia-gN-k0P"/>
+                            <constraint firstItem="pBa-i9-TVl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hO6-bc-fpe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageBackground" destination="4Xd-bh-WRy" id="QWl-wn-Ciw"/>
                         <outlet property="labelText" destination="pBa-i9-TVl" id="mjj-NE-CWM"/>
                         <segue destination="wd4-zX-p89" kind="show" identifier="rightSegue" id="y8F-mY-tpq"/>
+                        <segue destination="Ela-iw-No6" kind="show" identifier="leftViewRecording" id="Mwd-lZ-25V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-557" y="-1257"/>
+            <point key="canvasLocation" x="-1251" y="-1866"/>
+        </scene>
+        <!--Record Alphabet-->
+        <scene sceneID="Iyk-dn-f1e">
+            <objects>
+                <viewController id="Ela-iw-No6" customClass="RecordAlphabet" customModule="DaddyAlphabet" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bW2-nc-jnS"/>
+                        <viewControllerLayoutGuide type="bottom" id="uIy-8E-dkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ja-ZF-c3V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-eb-FYE">
+                                <rect key="frame" x="276" y="261" width="48" height="77"/>
+                                <state key="normal" image="RecordIcon"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="Ela-iw-No6" eventType="touchUpInside" id="QX4-eP-kze"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSw-S8-fFq">
+                                <rect key="frame" x="247" y="367" width="104" height="50"/>
+                                <state key="normal" image="stop@2x-iphone"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="Ela-iw-No6" eventType="touchUpInside" id="50g-le-TOR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ICs-eb-FYE" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="6EN-mG-HhY"/>
+                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="top" secondItem="ICs-eb-FYE" secondAttribute="bottom" constant="40" id="EYc-eV-TtF" userLabel="Stop Button.top = Record Button.bottom + 20"/>
+                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="Y4C-81-xxu"/>
+                            <constraint firstItem="ICs-eb-FYE" firstAttribute="centerY" secondItem="2Ja-ZF-c3V" secondAttribute="centerY" id="sU8-JE-vzp"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="recordButton" destination="ICs-eb-FYE" id="Cv7-TZ-yae"/>
+                        <outlet property="stopButton" destination="ZSw-S8-fFq" id="ILB-fM-mRM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLeftView" id="Yrv-0B-Kt1"/>
+                        <segue destination="wd4-zX-p89" kind="show" identifier="toRightView" id="fOp-Jl-cTw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CZ-fk-c2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="-1974"/>
         </scene>
         <!--Right View-->
         <scene sceneID="YPp-1g-h3L">
@@ -59,35 +116,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Go-RK-TmU">
-                                <rect key="frame" x="154" y="155" width="293" height="290"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Go-RK-TmU">
+                                <rect key="frame" x="143" y="145" width="319" height="310"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="hfK-wc-Jtw"/>
+                                    <constraint firstAttribute="width" constant="200" id="kPl-en-fvJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="646-Cc-OwV">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="646-Cc-OwV">
                                 <rect key="frame" x="138" y="145" width="324" height="310"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="2aH-bw-nf4"/>
+                                    <constraint firstAttribute="height" constant="250" id="sDS-8d-fK9"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="Ftm-63-apt"/>
-                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="klU-TZ-cwY"/>
-                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="olc-9I-2RS"/>
-                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="xH1-pK-ULg"/>
+                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="3e2-nG-W4K"/>
+                            <constraint firstItem="646-Cc-OwV" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="Cv3-4d-JWW"/>
+                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerX" secondItem="yvQ-Lu-XQI" secondAttribute="centerX" id="L9J-tW-jdV"/>
+                            <constraint firstItem="7Go-RK-TmU" firstAttribute="centerY" secondItem="yvQ-Lu-XQI" secondAttribute="centerY" id="LOr-zD-qoY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageBackground" destination="646-Cc-OwV" id="9IP-Qu-2io"/>
                         <outlet property="labelText" destination="7Go-RK-TmU" id="kNa-EL-jb4"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="leftSegue" id="Wn8-rM-maJ"/>
+                        <segue destination="Ela-iw-No6" kind="show" identifier="rightViewRecording" id="Iwl-va-U3Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIU-Xq-w7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-1257"/>
+            <point key="canvasLocation" x="-1106" y="-992"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RecordIcon" width="100" height="100"/>
+        <image name="stop@2x-iphone" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Iwl-va-U3Q"/>
+        <segue reference="fOp-Jl-cTw"/>
+        <segue reference="Yrv-0B-Kt1"/>
+    </inferredMetricsTieBreakers>
 </document>

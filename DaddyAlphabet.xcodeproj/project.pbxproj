@@ -33,6 +33,7 @@
 		280427291D34B8E500F8FE68 /* Xmascake.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2804270F1D34B8E500F8FE68 /* Xmascake.jpeg */; };
 		2804272A1D34B8E500F8FE68 /* Yogurt.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 280427101D34B8E500F8FE68 /* Yogurt.jpeg */; };
 		2804272B1D34B8E500F8FE68 /* Zuchinni.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 280427111D34B8E500F8FE68 /* Zuchinni.jpeg */; };
+		28C8B46A1D3882A5006F4863 /* RecordAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8B4691D3882A5006F4863 /* RecordAlphabet.swift */; };
 		DC52DD681C4B648D0050BBF7 /* Zuchinni.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DC52DD4E1C4B648D0050BBF7 /* Zuchinni.m4a */; };
 		DC52DD691C4B648D0050BBF7 /* Yogurt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DC52DD4F1C4B648D0050BBF7 /* Yogurt.m4a */; };
 		DC52DD6A1C4B648D0050BBF7 /* Xmascake.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DC52DD501C4B648D0050BBF7 /* Xmascake.m4a */; };
@@ -95,6 +96,7 @@
 		2804270F1D34B8E500F8FE68 /* Xmascake.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Xmascake.jpeg; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Xmascake.jpeg; sourceTree = "<absolute>"; };
 		280427101D34B8E500F8FE68 /* Yogurt.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Yogurt.jpeg; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Yogurt.jpeg; sourceTree = "<absolute>"; };
 		280427111D34B8E500F8FE68 /* Zuchinni.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Zuchinni.jpeg; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Zuchinni.jpeg; sourceTree = "<absolute>"; };
+		28C8B4691D3882A5006F4863 /* RecordAlphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAlphabet.swift; sourceTree = "<group>"; };
 		DC52DD4E1C4B648D0050BBF7 /* Zuchinni.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zuchinni.m4a; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Zuchinni.m4a; sourceTree = "<absolute>"; };
 		DC52DD4F1C4B648D0050BBF7 /* Yogurt.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Yogurt.m4a; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Yogurt.m4a; sourceTree = "<absolute>"; };
 		DC52DD501C4B648D0050BBF7 /* Xmascake.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Xmascake.m4a; path = /Users/Sappy/Desktop/DaddyDoodle/DaddyAlphabet/Xmascake.m4a; sourceTree = "<absolute>"; };
@@ -237,6 +239,7 @@
 				DCDEAED51BC967C200970747 /* LeftViewController.swift */,
 				DCDEAED71BC967D900970747 /* RightViewController.swift */,
 				DC5625C31BCAA01F00B73BED /* Alphabet.swift */,
+				28C8B4691D3882A5006F4863 /* RecordAlphabet.swift */,
 				DC616E831BCDDDD60093F441 /* Launch Screen.storyboard */,
 			);
 			path = DaddyAlphabet;
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C8B46A1D3882A5006F4863 /* RecordAlphabet.swift in Sources */,
 				DCDEAED61BC967C200970747 /* LeftViewController.swift in Sources */,
 				DC5625C41BCAA01F00B73BED /* Alphabet.swift in Sources */,
 				DCDEAED81BC967D900970747 /* RightViewController.swift in Sources */,
