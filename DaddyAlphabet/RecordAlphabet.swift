@@ -25,7 +25,7 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
         stopButton.enabled = true
         recordButton.enabled = false
         if let ar = audioRecorder {
-            ar.record()
+            ar.recordForDuration(5)
         }
     }
     
@@ -50,6 +50,8 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
     
     func finishRecording(success success: Bool) {
         audioRecorder = nil
+        recordingSession = nil
+
         if !success {
             print("Recording failed")
         }
@@ -69,10 +71,10 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
     }
     
     func setupRecorder() {
-        let recordSettings = [AVSampleRateKey : 14000.0,
+        let recordSettings = [AVSampleRateKey : 12000.0,
                               AVFormatIDKey : Int(kAudioFormatMPEG4AAC),
                               AVNumberOfChannelsKey : 1 as NSNumber,
-                              AVEncoderAudioQualityKey : AVAudioQuality.High.rawValue]
+                              AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue]
         
         do {
             audioRecorder = try AVAudioRecorder(URL: filePathURL, settings: recordSettings )

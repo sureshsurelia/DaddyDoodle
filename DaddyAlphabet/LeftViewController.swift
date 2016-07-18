@@ -25,11 +25,13 @@ var destinationSegue = ""
 
 func playAudio() {
     let fileManager = NSFileManager.defaultManager()
-    print (filePathURL.absoluteString)
-    if fileManager.fileExistsAtPath(filePathURL.absoluteString) {
+    
+    if fileManager.fileExistsAtPath(filePathURL.path!) {
         do {
             try audioPlayer = AVAudioPlayer(contentsOfURL: filePathURL)
+            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
             audioPlayer.enableRate = true
+            audioPlayer.volume = 1.0
             print("successfully started the audio player")
         }catch {
             print("Exiting program, couldn't create audio player")
@@ -259,6 +261,13 @@ class LeftViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         destinationSegue = leftSegue
+        
+        if let lap = audioPlayer {
+            lap.stop()
+        }else {
+            print("No audioplayer available!")
+        }
+        
         if (segue.identifier == rightSegue) {
             segue.destinationViewController as! RightViewController
             setSwipe(swipeCount,passedDirectionToIncrease: directionToIncrease)

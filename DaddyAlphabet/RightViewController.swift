@@ -214,6 +214,13 @@ class RightViewController: UIViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         destinationSegue = rightSegue
+        
+        if let lap = audioPlayer {
+            lap.stop()
+        }else {
+            print("No audioplayer available!")
+        }
+        
         if (segue.identifier == leftSegue) {
             segue.destinationViewController as! LeftViewController
             setSwipe(swipeCount,passedDirectionToIncrease: directionToIncrease)
