@@ -39,7 +39,7 @@ class Alphabet{
                     Alphabet(fileName: "Juice",alphabetText: "J", color: "FF0033"),
                     Alphabet(fileName: "Kiwi",alphabetText: "K", color: "6600FF"),
                     Alphabet(fileName: "Lemon",alphabetText: "L" , color: "FF0033"),
-                    Alphabet(fileName: "Milk",alphabetText: "M" , color: "FFCCCC"),
+                    Alphabet(fileName: "Mango",alphabetText: "M" , color: "FFCCCC"),
                     Alphabet(fileName: "Nuts",alphabetText: "N", color: "99CCCC"),
                     Alphabet(fileName: "Orange",alphabetText: "O", color: "66FFCC"),
                     Alphabet(fileName: "Pizza",alphabetText: "P", color: "FFCC33"),
