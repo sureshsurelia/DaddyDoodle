@@ -70,6 +70,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-eb-FYE">
                                 <rect key="frame" x="276" y="261" width="48" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Sqq-Ul-xNA"/>
+                                </constraints>
                                 <state key="normal" image="RecordIcon"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="Ela-iw-No6" eventType="touchUpInside" id="QX4-eP-kze"/>
@@ -82,13 +85,22 @@
                                     <action selector="stopAudio:" destination="Ela-iw-No6" eventType="touchUpInside" id="50g-le-TOR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReN-RH-nA9">
+                                <rect key="frame" x="262" y="505" width="76" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="Cancel:" destination="Ela-iw-No6" eventType="touchUpInside" id="AjY-Ch-Gjw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ICs-eb-FYE" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="6EN-mG-HhY"/>
-                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="top" secondItem="ICs-eb-FYE" secondAttribute="bottom" constant="40" id="EYc-eV-TtF" userLabel="Stop Button.top = Record Button.bottom + 20"/>
-                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="Y4C-81-xxu"/>
-                            <constraint firstItem="ICs-eb-FYE" firstAttribute="centerY" secondItem="2Ja-ZF-c3V" secondAttribute="centerY" id="sU8-JE-vzp"/>
+                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="top" secondItem="ICs-eb-FYE" secondAttribute="bottom" constant="20" id="5Ej-tU-SFM"/>
+                            <constraint firstItem="ReN-RH-nA9" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="8yN-Bd-blx"/>
+                            <constraint firstItem="ICs-eb-FYE" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="WPD-82-GRO"/>
+                            <constraint firstItem="ReN-RH-nA9" firstAttribute="top" secondItem="ZSw-S8-fFq" secondAttribute="bottom" constant="30" id="Wnm-o0-241"/>
+                            <constraint firstItem="ZSw-S8-fFq" firstAttribute="centerX" secondItem="2Ja-ZF-c3V" secondAttribute="centerX" id="fn2-f1-8sm"/>
+                            <constraint firstItem="ICs-eb-FYE" firstAttribute="top" secondItem="bW2-nc-jnS" secondAttribute="bottom" constant="40" id="mga-nM-Ekf"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -162,7 +174,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mwd-lZ-25V"/>
-        <segue reference="Wn8-rM-maJ"/>
-        <segue reference="y8F-mY-tpq"/>
+        <segue reference="Yrv-0B-Kt1"/>
+        <segue reference="fOp-Jl-cTw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,7 +31,7 @@ class RightViewController: UIViewController{
         let dragGesture = UIPanGestureRecognizer(target: self, action: #selector(RightViewController.wasDragged(_:)))
         let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(RightViewController.handleLongPressGesture(_:)))
         longPressGR.minimumPressDuration = 1.0
-        longPressGR.numberOfTouchesRequired = 1
+        longPressGR.numberOfTouchesRequired = 2
 
         
         leftSwipe.direction = .Left
@@ -69,7 +69,7 @@ class RightViewController: UIViewController{
         }
 
 //        filePathURL = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource(alphabetList[swipeCount].fileName, ofType: "m4a")!)
-        filePathURL = directoryURL(alphabetList[swipeCount].fileName)
+        directoryURL()
         playAudio()
 
     }

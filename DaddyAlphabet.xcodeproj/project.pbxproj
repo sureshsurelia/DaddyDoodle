@@ -32,6 +32,7 @@
 		285170B11D4DAC5800619886 /* Tomato.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 285170981D4DAC5800619886 /* Tomato.jpeg */; };
 		285170B21D4DAC5800619886 /* Sandwitch.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 285170991D4DAC5800619886 /* Sandwitch.jpeg */; };
 		285170B31D4DAC5800619886 /* Rice.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2851709A1D4DAC5800619886 /* Rice.jpeg */; };
+		28882CCC1D4E983900E89A2D /* Yogurt.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28882CCB1D4E983900E89A2D /* Yogurt.jpeg */; };
 		28C8B46A1D3882A5006F4863 /* RecordAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8B4691D3882A5006F4863 /* RecordAlphabet.swift */; };
 		DC5625C41BCAA01F00B73BED /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5625C31BCAA01F00B73BED /* Alphabet.swift */; };
 		DC616E841BCDDDD60093F441 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC616E831BCDDDD60093F441 /* Launch Screen.storyboard */; };
@@ -68,6 +69,7 @@
 		285170981D4DAC5800619886 /* Tomato.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tomato.jpeg; sourceTree = "<group>"; };
 		285170991D4DAC5800619886 /* Sandwitch.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sandwitch.jpeg; sourceTree = "<group>"; };
 		2851709A1D4DAC5800619886 /* Rice.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rice.jpeg; sourceTree = "<group>"; };
+		28882CCB1D4E983900E89A2D /* Yogurt.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yogurt.jpeg; sourceTree = "<group>"; };
 		28C8B4691D3882A5006F4863 /* RecordAlphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAlphabet.swift; sourceTree = "<group>"; };
 		DC5625C31BCAA01F00B73BED /* Alphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
 		DC616E831BCDDDD60093F441 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		DC1ACF0E1C43061100E53C2C /* SupportingImageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				28882CCB1D4E983900E89A2D /* Yogurt.jpeg */,
 				285170821D4DAC5800619886 /* Quinoa.jpeg */,
 				285170831D4DAC5800619886 /* Pizza.jpeg */,
 				285170841D4DAC5800619886 /* Orange.jpeg */,
@@ -234,6 +237,7 @@
 				DC616E841BCDDDD60093F441 /* Launch Screen.storyboard in Resources */,
 				285170AB1D4DAC5800619886 /* Apple.jpeg in Resources */,
 				285170A01D4DAC5800619886 /* Lemon.jpeg in Resources */,
+				28882CCC1D4E983900E89A2D /* Yogurt.jpeg in Resources */,
 				285170AA1D4DAC5800619886 /* Banana.jpeg in Resources */,
 				285170B21D4DAC5800619886 /* Sandwitch.jpeg in Resources */,
 				285170A31D4DAC5800619886 /* Icecream.jpeg in Resources */,

@@ -20,6 +20,8 @@ let rightSegue = "rightSegue"
 let rightViewRecording = "rightViewRecording"
 let leftViewRecording = "leftViewRecording"
 var destinationSegue = ""
+var tmpPathURL: NSURL!
+
 
 
 
@@ -56,12 +58,11 @@ func setSwipe(passedSwipeCount: Int, passedDirectionToIncrease :AlphabetDirectio
     print("passed swipe count \(swipeCount) direction to increase is \(passedDirectionToIncrease)")
 }
 
-func directoryURL(fileName: String) -> NSURL? {
+func directoryURL() {
     let fileManager = NSFileManager.defaultManager()
     let urls = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
     let documentDirectory = urls[0] as NSURL
-    let soundURL = documentDirectory.URLByAppendingPathComponent(fileName + ".m4a")
-    return soundURL
+    filePathURL = documentDirectory.URLByAppendingPathComponent(alphabetList[swipeCount].fileName + ".m4a")
 }
 
 
@@ -86,7 +87,7 @@ class LeftViewController: UIViewController {
         let dragGesture = UIPanGestureRecognizer(target: self, action: #selector(LeftViewController.wasDragged(_:)))
         let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(LeftViewController.handleLongPressGesture(_:)))
         longPressGR.minimumPressDuration = 1.0
-        longPressGR.numberOfTouchesRequired = 1
+        longPressGR.numberOfTouchesRequired = 2
         
         
         leftSwipe.direction = .Left
@@ -119,7 +120,7 @@ class LeftViewController: UIViewController {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
         }
         
-        filePathURL = directoryURL(alphabetList[swipeCount].fileName)
+        directoryURL()
         playAudio()
     }
 
