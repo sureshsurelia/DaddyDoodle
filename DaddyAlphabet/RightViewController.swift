@@ -16,7 +16,19 @@ class RightViewController: UIViewController{
     
     @IBOutlet weak var labelText: UILabel!
     
-
+//    @IBOutlet weak var switchValue: UISwitch!
+//
+//    @IBAction func switchAction(sender: AnyObject) {
+//        if textCase == true {
+//            textCase = false
+//        }else
+//        {
+//            textCase = true
+//        }
+//        switchValue.hidden = true
+//
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,8 +65,13 @@ class RightViewController: UIViewController{
         
         self.imageBackground.hidden = true
         self.labelText.hidden = false
+        if textCase == true {
+            self.labelText.text = alphabetList[swipeCount].alphabetText.uppercaseString
+        }else
+        {
+            self.labelText.text = alphabetList[swipeCount].alphabetText.lowercaseString
+        }
         
-        self.labelText.text = alphabetList[swipeCount].alphabetText
         self.labelText.backgroundColor = UIColor(hexString: alphabetList[swipeCount].color)
         self.imageBackground.image = UIImage(named: "\(alphabetList[swipeCount].fileName).jpeg")
 

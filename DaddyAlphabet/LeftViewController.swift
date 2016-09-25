@@ -21,6 +21,7 @@ let rightViewRecording = "rightViewRecording"
 let leftViewRecording = "leftViewRecording"
 var destinationSegue = ""
 var tmpPathURL: NSURL!
+var textCase = false
 
 
 
@@ -70,6 +71,17 @@ class LeftViewController: UIViewController {
     
     @IBOutlet weak var labelText: UILabel!
     
+//    @IBAction func switchAction(sender: AnyObject) {
+//        if textCase == true {
+//            textCase = false
+//        }else
+//        {
+//            textCase = true
+//        }
+//        switchValue.hidden = true
+//        
+//    }
+//    @IBOutlet weak var switchValue: UISwitch!
     @IBOutlet weak var imageBackground: UIImageView!
     
     override func viewDidLoad() {
@@ -108,7 +120,12 @@ class LeftViewController: UIViewController {
         self.imageBackground.hidden = true
         self.labelText.hidden = false
         
-        self.labelText.text = alphabetList[swipeCount].alphabetText
+        if textCase == true {
+            self.labelText.text = alphabetList[swipeCount].alphabetText.uppercaseString
+        }else
+        {
+            self.labelText.text = alphabetList[swipeCount].alphabetText.lowercaseString
+        }
         self.labelText.backgroundColor = UIColor(hexString: alphabetList[swipeCount].color)
         self.imageBackground.image = UIImage(named: "\(alphabetList[swipeCount].fileName).jpeg")
         let when = dispatch_time(DISPATCH_TIME_NOW, Int64(2000 * Double(NSEC_PER_MSEC)))

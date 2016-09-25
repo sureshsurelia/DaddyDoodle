@@ -18,6 +18,15 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet weak var alphabetCase: UISwitch!
+    
+    @IBAction func setCase(sender: AnyObject) {
+        if textCase == true {
+            textCase = false
+        }else{
+            textCase = true
+        }
+    }
     @IBAction func Cancel(sender: AnyObject) {
         if let ar = audioRecorder {
             ar.stop()
@@ -32,7 +41,7 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
         stopButton.enabled = true
         recordButton.enabled = false
         if let ar = audioRecorder {
-            ar.recordForDuration(5)
+            ar.recordForDuration(10)
         }
     }
     
@@ -53,6 +62,12 @@ class RecordAlphabet: UIViewController, AVAudioRecorderDelegate {
             } else {
                 print("permission to record not granted")
             }
+        }
+        if textCase == false {
+            alphabetCase.on = false
+        }else
+        {
+            alphabetCase.on = true
         }
     }
     
